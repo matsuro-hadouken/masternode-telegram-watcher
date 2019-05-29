@@ -130,7 +130,7 @@ echo >> config.tmp
 echo TOKEN=$TOKEN >> config.tmp
 echo CHAT_ID=$CHAT_ID >> config.tmp
 
-wget -q https://raw.githubusercontent.com/matsuro-hadouken/mn-status-check/master/main.sh
+wget -q https://raw.githubusercontent.com/matsuro-hadouken/masternode-telegram-watcher/master/main.sh
 
 cat config.tmp main.sh > mn-check.sh
 
@@ -143,7 +143,7 @@ chmod a+x mn-check.sh
 
 mv mn-check.sh /usr/local/bin
 
-wget -q https://raw.githubusercontent.com/matsuro-hadouken/mn-status-check/master/MasternodeCheck.service
+wget -q https://raw.githubusercontent.com/matsuro-hadouken/masternode-telegram-watcher/master/MasternodeCheck.service
 
 chmod 0644 MasternodeCheck.service
 
