@@ -14,7 +14,7 @@ Good luck, since I don't provide any guarantees.
 
 -----------------------------------
 
-wget https://raw.githubusercontent.com/matsuro-hadouken/mn-status-check/master/mn-status-monitor.sh && chmod +x mn-status-monitor.sh && bash mn-status-monitor.sh
+wget https://raw.githubusercontent.com/matsuro-hadouken/masternode-telegram-watcher/master/mn-status-monitor.sh && chmod +x mn-status-monitor.sh && bash mn-status-monitor.sh
 
 -----------------------------------
 
