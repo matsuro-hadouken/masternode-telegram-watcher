@@ -9,7 +9,7 @@ while :
                 if [ "$MN_STAT" != 4 ]
 
                 then
-                proxychains curl -s -X POST $URL -d chat_id=$CHAT_ID -d text=$NODE_IP" - doesn't feel well"
+                curl -s -X POST $URL -d chat_id=$CHAT_ID -d text=$NODE_IP" - doesn't feel well"
                 fi
 
                 sleep 1h
