@@ -7,7 +7,7 @@ please check our web site www.dogec.io**
 
 - Telegram bot token
 - Private channel ID
-- apt-get install wget
+- wget, curl ( should have by default )
 
 Good luck, since I don't provide any guarantees.
 
