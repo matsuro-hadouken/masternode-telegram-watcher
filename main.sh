@@ -2,7 +2,7 @@
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 NODE_IP=$(cat /root/.dogecash/dogecash.conf | grep "externalip="  | grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)")
 
-UPDATE_INTERVAL=60 # service update interval
+UPDATE_INTERVAL=600 # service update interval
 MAX_DIF=8          # acceptable sync drift
 BLOCK_SHIFT=8      # take a shift from the last block for hash test, since we can't be sure about recent one.
 
