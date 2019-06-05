@@ -34,7 +34,6 @@ do
 		rm /usr/local/bin/mn-check*
 		rm /etc/systemd/system/MasternodeCheck*
 		systemctl --user daemon-reload
-		
 		echo -e "\e[39m"
 		exit
                 ;;
