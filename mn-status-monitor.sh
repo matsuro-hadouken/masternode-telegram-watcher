@@ -5,7 +5,8 @@ rm -f MasternodeCheck*
 
 clear
 
-PS3='What we do: '
+echo -e  "\e[32mWhat we do ?"
+echo -e  "\e[39m"
 options=("Uninstall" "Install")
 select opt in "${options[@]}"
 do
@@ -13,7 +14,7 @@ do
         "Install")
                 clear
                 echo
-                echo "Ok, let's roll !"
+                echo -e  "\e[92mOk, let's roll !"
                 sleep 2
                 clear
                 break
@@ -21,7 +22,7 @@ do
         "Uninstall")
 
                 clear
-                echo "We will remove service from this machine."
+                echo -e "\e[31mWe will remove service from this server."
                 sleep 1
 
 		systemctl stop MasternodeCheck.service
@@ -35,10 +36,11 @@ do
 		rm /etc/systemd/system/MasternodeCheck*
 		
 		systemctl --user daemon-reload
-
+		
+		echo -e "\e[39m"
 		exit
                 ;;
-                *) echo "invalid option $REPLY";;
+                *) ;;
         esac
 done
 
@@ -55,12 +57,12 @@ read CHAT_ID
 clear
 
 echo
-echo "Are you sure ? "
-echo
+echo -e "\e[31mAre you sure ? "
+echo -e "\e[34m"
 echo $TOKEN
 echo
 echo $CHAT_ID
-echo
+echo -e "\e[39m"
 
 	printf "Press any key to continue or 'CTRL+C' to exit "
 
@@ -72,8 +74,8 @@ echo
 
 clear
 echo
-echo "Now lets check Telegram Bot connection"
-echo
+echo -e "\e[32mNow lets check Telegram Bot connection."
+echo -e  "\e[39m"
 
 	printf "Press any key to continue or 'CTRL+C' to exit "
 
@@ -90,17 +92,18 @@ curl --silent --output -X POST $URL -d chat_id=$CHAT_ID -d text="PLEASE CONFIRM 
 clear
 
 echo
-echo Sending message to your channel ...
+echo -e "\e[91mSending message to your channel ..."
 sleep 1
 
 clear
 
-echo Can you confirm your connections ?
-echo
+echo "Confirm everything setup properly ..."
+echo -e  "\e[39m"
 
 # confirmation menue
 
-PS3='Did you receive message: '
+echo -e "\e[32mDid you receive message ? "
+echo -e "\e[39m"
 options=("Yes" "No")
 select opt in "${options[@]}"
 do
@@ -108,20 +111,24 @@ do
         "Yes")
 		clear
 		echo
-        	echo "Ok, cool, lets continue ..."
+        	echo -e "\e[32mOk, cool, continue ..."
 		sleep 2
+		echo -e "\e[39m"
 		clear
 		break
         	;;
 	"No")
 		clear
-        	echo "Please try to obtain right data"
-        	echo "for your bot, something is missing"
-        	echo "or incorrect."
-		sleep 2
+        	echo -e "\e[31mPlease try to obtain right data"
+        	echo -e "\e[31mfor your bot, something is missing"
+        	echo -e "\e[31mor incorrect."
+		echo
+		echo -e "\e[95mRefer to GitHub page for more information"
+		echo -e "\e[39m"
+		sleep 3
 		exit
 		;;
-        	*) echo "invalid option $REPLY";;
+        	*) ;;
     	esac
 done
 
@@ -151,7 +158,7 @@ chmod 0644 MasternodeCheck.service
 
 mv MasternodeCheck.service /etc/systemd/system
 
-echo "Starting service please wait ..."
+echo -e "\e[31mStarting service please wait ..."
 
 systemctl enable MasternodeCheck.service
 
@@ -163,10 +170,12 @@ sleep 3
 
 clear
 
-echo
-echo "Let's check if service started"
+echo -e "\e[35m"
+echo "Checking service status ..."
 
 sleep 3
+
+echo -e "\e[39m"
 
 clear
 
