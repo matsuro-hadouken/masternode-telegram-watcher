@@ -19,13 +19,9 @@ wget https://raw.githubusercontent.com/matsuro-hadouken/masternode-telegram-watc
 
 -----------------------------------
 
-**How to create bot and obtain token:**
+**Everything you need to know about telegram bot and channel ID is on the Wiki page.** 
 
-https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token
-
-**Hot to obtain private channel ID:**
-
-https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
+https://github.com/matsuro-hadouken/masternode-telegram-watcher/wiki
 
 *P.S. - Should be compatible with Debian forks.*
 
