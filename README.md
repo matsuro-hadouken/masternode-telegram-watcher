@@ -9,8 +9,6 @@ please check our web site www.dogec.io**
 - Private channel ID
 - wget, curl ( should have by default )
 
-Good luck, since I don't provide any guarantees.
-
 **To install paste this string in to command line:**
 
 -----------------------------------
